@@ -19,6 +19,14 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'guard-rspec', require: false
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 group :development do
