@@ -27,6 +27,8 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
+gem 'geocoder'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'guard-rspec', require: false
