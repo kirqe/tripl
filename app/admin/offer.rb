@@ -27,9 +27,9 @@ ActiveAdmin.register Offer do
       f.input :excerpt
       f.input :description
       f.input :location
-      f.input :offer_type
+      f.input :offer_type, as: :select, collection: Offer::OFFERS, include_blank: false
       f.input :salary
-      f.input :currency
+      f.input :currency, as: :select, collection: Offer::CURRENCIES, include_blank: false
       f.input :phone
       f.input :email
       f.input :expire_at

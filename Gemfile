@@ -28,6 +28,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 # gem 'capistrano-rails', group: :development
 
 gem 'geocoder'
+gem 'annotate'
 
 group :development, :test do
   gem 'byebug', platform: :mri
