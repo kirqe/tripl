@@ -24,3 +24,4 @@
     approved_at: "2016-09-13 19:16:13"
   )
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

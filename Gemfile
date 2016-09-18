@@ -9,7 +9,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'react-rails'
 # gem 'browserify-rails'
 gem 'ffaker'
-
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
