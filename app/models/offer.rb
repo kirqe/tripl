@@ -55,6 +55,11 @@ class Offer < ApplicationRecord
   validates :expire_at, presence: true
   validates :name, presence: true
   
+  scope :approved, -> { where('approved_at IS NOT NULL') }
+  
+  def self.map_locations
+    Offer.approved.pluck(:latitude, :longitude)
+  end
   
   geocoded_by :location
   after_validation :geocode

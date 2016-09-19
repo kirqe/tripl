@@ -20,8 +20,6 @@ gem 'react-rails'
 # Admin
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'

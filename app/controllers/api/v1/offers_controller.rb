@@ -20,6 +20,10 @@ module Api::V1
       end
     end
     
+    def locations
+      render json: Offer.map_locations
+    end
+    
     private
     def set_offer
       @offer = Offer.find(params[:id]);

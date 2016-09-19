@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     scope module: 'api' do
       namespace :v1 do
         resources :offers, only: [:index, :show, :create]
+        get '/locations', to: "offers#locations" # list of coords for map
       end
     end
   end

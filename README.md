@@ -5,7 +5,10 @@ Tripl
 
 http://pow.cx/
 
-api.tripl.dev/v1/offers
+->
+
+api.tripl.dev/v1/
+
 
 ```
 
