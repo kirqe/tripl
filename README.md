@@ -19,3 +19,8 @@ api.tripl.dev/v1/
 ...
 
 ```
+
+```
+webpack-dev-server --progress --color --watch
+
+```
