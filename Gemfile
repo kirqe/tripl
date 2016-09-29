@@ -27,6 +27,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'geocoder'
 gem 'annotate'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'sqlite3'
