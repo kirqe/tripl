@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
     entry: {
       app: './app'
@@ -9,7 +11,9 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: 'style!css' },
+            { test: /\.css$/,
+              loader: ExtractTextPlugin.extract('style-loader', 'css-loader'),
+            },
             {
               test: /\.(js|jsx)$/,
               exclude: /(node_modules|bower_components)/,
@@ -20,5 +24,10 @@ module.exports = {
               }
             }
         ]
-    }
+    },
+    plugins: [
+      new ExtractTextPlugin('[name].css', {
+        allChunks: true,
+      }),
+    ],
 };

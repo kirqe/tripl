@@ -1,0 +1,23 @@
+body {
+  /*background-color: #efe;*/
+}
+
+.offers {
+  margin-bottom: 30px;
+}
+
+.offer {
+  border: 1px solid #FFFAE8;
+  background-color: #FFFBEE;
+  box-shadow: 3px 3px 30px #eee;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.offer h2 {
+  margin: 5px 0 10px 0;
+}
+
+.ometa .label {
+  margin-right: 5px;
+}
