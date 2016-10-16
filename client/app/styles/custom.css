@@ -2,8 +2,50 @@ body {
   /*background-color: #efe;*/
 }
 
+.sideNav{
+  background-color: #fff;
+}
+
+ul.sideNav  {
+  padding: 10px;
+  list-style-type: none;
+  vertical-align: middle;
+}
+
+ul.sideNav  li {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.sideLeft{
+  width:600px;
+
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
 .offers {
-  margin-bottom: 30px;
+  width: 600px;
+  position: fixed;
+  top: 45;
+  bottom: 0;
+  overflow-y: scroll;
+  background-color: #eee;
+  padding: 0 5px;
+
+}
+@media (max-width: 768px) {
+  .map { display: none; }
+  .sideLeft, .offers {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .offer {
@@ -14,10 +56,15 @@ body {
   margin: 10px 0;
   border-radius: 5px;
 }
-.offer h2 {
+.offer h3 {
   margin: 5px 0 10px 0;
+}
+
+.offer .excerpt {
+  font-size: 12px;
 }
 
 .ometa .label {
   margin-right: 5px;
+  font-size: 9px;
 }

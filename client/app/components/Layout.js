@@ -28,14 +28,20 @@ class Layout extends React.Component {
     return (
       <div id='Layout' className="container-fluid">
         <div className="row">
-          <div className="col-md-6">
-            <h1>Hello World!</h1>
+          <div className="sideLeft col-md-6">
+            <ul className="sideNav">
+              <li><a href="#" onClick={this.addO}>Add new offer</a></li>
+              <li><a href="#" onClick={this.addO}>Click</a></li>
+
+            </ul>
+            <div className="offers">
+              {this.state.offers.map(offer =>
+                <Offer key={offer.id} {...offer.attributes} />
+              )}
+            </div>
           </div>
-          <div className="offers col-md-6">
-            <a href="#" className="btn" onClick={this.addO}>Click</a>
-            {this.state.offers.map(offer =>
-              <Offer key={offer.id} {...offer.attributes} />
-            )}
+          <div className="col-md-6 map">
+            <h1>Hello World!</h1>
           </div>
         </div>
       </div>
