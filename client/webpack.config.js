@@ -1,3 +1,4 @@
+var webpack = require('webpack')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -22,6 +23,10 @@ module.exports = {
                 presets: ['es2015', 'stage-0', 'react'],
                 plugins: ['transform-runtime']
               }
+            },
+            {
+              test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+              loader:  'file-loader',
             }
         ]
     },
@@ -29,5 +34,12 @@ module.exports = {
       new ExtractTextPlugin('[name].css', {
         allChunks: true,
       }),
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.ProvidePlugin({
+              jQuery: 'jquery',
+              $: 'jquery',
+              jquery: 'jquery'
+          })
     ],
 };
