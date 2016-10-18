@@ -2,13 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Offer = ({ offer }) => {
-  const salary = offer => {
-    if (offer.attributes.salary && offer.attributes.currency){
-      `${offer.attributes.salary + ' ' + offer.attributes.currency}`
-    }
-    return 0;
-  }
-
   return(
     <div className="offer">
       <h3>{offer.attributes && offer.attributes.title}</h3>
