@@ -1,23 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-class Offer extends React.Component {
-  constructor(props) {
-    super(props);
-
+const Offer = ({ offer }) => {
+  const salary = offer => {
+    if (offer.attributes.salary && offer.attributes.currency){
+      `${offer.attributes.salary + ' ' + offer.attributes.currency}`
+    }
+    return 0;
   }
-  render(){
-    let props = this.props;
-    return(
-      <div className="offer">
-        <h3>{props.title}</h3>
-        <p className="excerpt">{props.excerpt}</p>
-        <div className="ometa">
-          <span className="label label-info">{props['offer-type']}</span>
-          <span className="label label-default">Expire: {props['expire-at']}</span>
-        </div>
+
+  return(
+    <div className="offer">
+      <h3>{offer.attributes && offer.attributes.title}</h3>
+      <p className="excerpt">{offer.attributes && offer.attributes.excerpt}</p>
+      <div className="ometa">
+        <span className="label label-info">{offer.attributes && offer.attributes.offer_type}</span>
+        <span className="label label-success">
+         {offer.attributes && (`${offer.attributes.salary + ' ' + offer.attributes.currency}`)}
+        </span>
+        <span className="label label-default">Expire: {offer.attributes && offer.attributes.expire_at}</span>
       </div>
-    )
-  }
-}
+    </div>
+  );
+};
 
 export default Offer;
