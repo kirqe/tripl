@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Offer from './Offer';
 import Offers from './Offers';
+import Sidenav from './Sidenav';
+import GettingStartedGoogleMap from './Map';
 
 const mapStateToProps = state => ({
   offers: state.offers
@@ -9,11 +11,18 @@ const mapStateToProps = state => ({
 
 const App = ({offers, children}) => {
   return (
-    <div className='app'>
-      <h1>sup</h1>
+    <div className="app container-fluid">
+      <div className="row">
+        <div className="col-md-6">
+          <Sidenav />
+          <Offers offers={offers} />
+        </div>
+        <div className="col-md-6">
+          <GettingStartedGoogleMap />
+        </div>
 
-      <Offers offers={offers} />
-      {children}
+        {children}
+      </div>
     </div>);
 };
 
